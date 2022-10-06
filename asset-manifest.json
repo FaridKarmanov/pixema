@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/react-pixema/static/css/main.9bf80ff5.css",
-    "main.js": "/react-pixema/static/js/main.9a9b31a7.js",
-    "static/media/background.png": "/react-pixema/static/media/background.59b7e78558daf9fb568b.png",
-    "static/media/not-found.jpg": "/react-pixema/static/media/not-found.ce293654fc5b055593cf.jpg",
-    "static/media/not-found-image.jpg": "/react-pixema/static/media/not-found-image.7fd9ee7ab55016a5a7f1.jpg",
-    "static/media/favorites-empty.svg": "/react-pixema/static/media/favorites-empty.bca03b74866305d2a29d3069ce91b4d0.svg",
-    "static/media/logo.svg": "/react-pixema/static/media/logo.1fa4ac953c28f6dc764c51a52552fdb4.svg",
-    "static/media/logo-light.svg": "/react-pixema/static/media/logo-light.22981b9ec8b862428f9a0d7bad09443a.svg",
-    "static/media/settings.svg": "/react-pixema/static/media/settings.c2a7493926e98b6f85fda12201f6c61c.svg",
-    "static/media/burger.svg": "/react-pixema/static/media/burger.4ac27e669d489887e2c13c04b94c2da1.svg",
-    "static/media/trends.svg": "/react-pixema/static/media/trends.de336f830ae1b0d1dc92d693e9787d7d.svg",
-    "static/media/home.svg": "/react-pixema/static/media/home.2e46636a96a233b7b9f29ef5189c0c67.svg",
-    "static/media/close-cross.svg": "/react-pixema/static/media/close-cross.303b7cbeb825ddab50ae83a7bdba2588.svg",
-    "static/media/favorites.svg": "/react-pixema/static/media/favorites.693e8898ef23de166fb502928ce8f283.svg",
-    "index.html": "/react-pixema/index.html",
-    "static/media/right-arrow.svg": "/react-pixema/static/media/right-arrow.3ca21fafddae62c5ca5ffdaf36ad5747.svg",
-    "static/media/left-arrow.svg": "/react-pixema/static/media/left-arrow.37d3dfc1a3f78db2ebb344eb522d305c.svg",
-    "static/media/search.svg": "/react-pixema/static/media/search.4ba9bca17211bbef2bee3847cddd2542.svg",
-    "main.9bf80ff5.css.map": "/react-pixema/static/css/main.9bf80ff5.css.map",
-    "main.9a9b31a7.js.map": "/react-pixema/static/js/main.9a9b31a7.js.map"
+    "main.css": "/static/css/main.9bf80ff5.css",
+    "main.js": "/static/js/main.35c4ef4f.js",
+    "static/media/background.png": "/static/media/background.59b7e78558daf9fb568b.png",
+    "static/media/not-found.jpg": "/static/media/not-found.ce293654fc5b055593cf.jpg",
+    "static/media/not-found-image.jpg": "/static/media/not-found-image.7fd9ee7ab55016a5a7f1.jpg",
+    "static/media/favorites-empty.svg": "/static/media/favorites-empty.bca03b74866305d2a29d3069ce91b4d0.svg",
+    "static/media/logo.svg": "/static/media/logo.1fa4ac953c28f6dc764c51a52552fdb4.svg",
+    "static/media/logo-light.svg": "/static/media/logo-light.22981b9ec8b862428f9a0d7bad09443a.svg",
+    "static/media/settings.svg": "/static/media/settings.c2a7493926e98b6f85fda12201f6c61c.svg",
+    "static/media/burger.svg": "/static/media/burger.4ac27e669d489887e2c13c04b94c2da1.svg",
+    "static/media/trends.svg": "/static/media/trends.de336f830ae1b0d1dc92d693e9787d7d.svg",
+    "static/media/home.svg": "/static/media/home.2e46636a96a233b7b9f29ef5189c0c67.svg",
+    "static/media/close-cross.svg": "/static/media/close-cross.303b7cbeb825ddab50ae83a7bdba2588.svg",
+    "static/media/favorites.svg": "/static/media/favorites.693e8898ef23de166fb502928ce8f283.svg",
+    "index.html": "/index.html",
+    "static/media/right-arrow.svg": "/static/media/right-arrow.3ca21fafddae62c5ca5ffdaf36ad5747.svg",
+    "static/media/left-arrow.svg": "/static/media/left-arrow.37d3dfc1a3f78db2ebb344eb522d305c.svg",
+    "static/media/search.svg": "/static/media/search.4ba9bca17211bbef2bee3847cddd2542.svg",
+    "main.9bf80ff5.css.map": "/static/css/main.9bf80ff5.css.map",
+    "main.35c4ef4f.js.map": "/static/js/main.35c4ef4f.js.map"
   },
   "entrypoints": [
     "static/css/main.9bf80ff5.css",
-    "static/js/main.9a9b31a7.js"
+    "static/js/main.35c4ef4f.js"
   ]
 }
