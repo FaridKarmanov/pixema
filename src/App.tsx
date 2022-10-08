@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import { AuthTemplate, MainTemplate, RequireAuth } from "components";
+import {
+  ErrorPage,
+  FavoritesPage,
+  HomePage,
+  MoviePage,
+  ResetPasswordPage,
+  SettingsPage,
+  SignInPage,
+  SignUpPage,
+  TrendsPage,
+} from "pages";
+import { ROUTE } from "routes";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path={ROUTE.HOME} element={<MainTemplate />}>
+        <Route index element={<HomePage />} />
+        <Route path={ROUTE.HOME} element={<RequireAuth />}>
+          <Route path={ROUTE.FAVORITES} element={<FavoritesPage />} />
+          <Route path={ROUTE.SETTINGS} element={<SettingsPage />} />
+        </Route>
+        <Route path={ROUTE.TRENDS} element={<TrendsPage />} />
+        <Route path={ROUTE.MOVIE} element={<MoviePage />} />
+      </Route>
+      <Route path={ROUTE.HOME} element={<AuthTemplate />}>
+        <Route path={ROUTE.SIGN_IN} element={<SignInPage />} />
+        <Route path={ROUTE.SIGN_UP} element={<SignUpPage />} />
+        <Route path={ROUTE.RESET} element={<ResetPasswordPage />} />
+      </Route>
+      <Route path={ROUTE.NOT_FOUND} element={<ErrorPage />} />
+    </Routes>
   );
-}
-
-export default App;
+};
