@@ -1,4 +1,6 @@
 import { FavoritesIcon, notFoundImage, TrendsIcon } from "assets";
+import { removeFromFavorites } from "store/features";
+import { useAppDispatch } from "store/hooks";
 import { Color } from "ui";
 import { Movie, MoviePoster, Released, CustomLink, Title } from "./styles";
 
@@ -12,6 +14,7 @@ interface IProps {
 }
 
 export const MovieListItem = ({ title, poster, imdbID, year, isTrend, isFavorite }: IProps) => {
+  const dispatch = useAppDispatch();
   return (
     <Movie
       initial={{ opacity: 1 }}
@@ -46,7 +49,9 @@ export const MovieListItem = ({ title, poster, imdbID, year, isTrend, isFavorite
               borderRadius: "5px",
               background: `${Color.Primary}`,
               fill: `${Color.White}`,
+              cursor: "pointer",
             }}
+            onClick={() => dispatch(removeFromFavorites(title as string))}
           />
         )}
       </>

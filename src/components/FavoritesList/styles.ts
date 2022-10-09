@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Color } from "ui";
 
 export const StyledFavoritesList = styled.ul`
   display: flex;
@@ -33,23 +32,4 @@ export const StyledFavoritesList = styled.ul`
     grid-template-columns: repeat(5, 266px);
     grid-gap: 40px;
   }
-`;
-
-export const Buttons = styled.p`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 56px;
-  width: 266px;
-  border-radius: 10px;
-  border: 1px solid ${Color.Border};
-  background: ${Color.Graphite};
-  fill: ${Color.Primary};
-  stroke: ${Color.Primary};
-  cursor: pointer;
-`;
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
 `;

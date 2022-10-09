@@ -14,7 +14,7 @@ const options: IOption[] = [
 ];
 
 export const TrendsPage = () => {
-  const { value, setValue } = useInput("2021");
+  const { value, setValue } = useInput("2022");
 
   const getValue = () => {
     return value ? options.find((option) => option.value === value) : options[0];
