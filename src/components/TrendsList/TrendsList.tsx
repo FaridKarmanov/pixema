@@ -6,13 +6,17 @@ import { getTrends } from "store/selectors";
 import { IMovie } from "types";
 import { StyledMovieList } from "./styles";
 
-export const TrendsList = () => {
+interface IProps {
+  value: string;
+}
+
+export const TrendsList = ({ value }: IProps) => {
   const dispatch = useAppDispatch();
   const { isLoading, trends } = useAppSelector(getTrends);
 
   useEffect(() => {
-    dispatch(fetchTrends("2018"));
-  }, [dispatch]);
+    dispatch(fetchTrends(value));
+  }, [dispatch, value]);
 
   if (isLoading) {
     return <LoadingSpinner />;

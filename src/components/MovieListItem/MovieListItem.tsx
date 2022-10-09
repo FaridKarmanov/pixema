@@ -1,5 +1,6 @@
-import { notFoundImage } from "assets";
-import { Movie, MoviePoster, MovieTrendsIcon, Released, CustomLink, Title } from "./styles";
+import { FavoritesIcon, notFoundImage, TrendsIcon } from "assets";
+import { Color } from "ui";
+import { Movie, MoviePoster, Released, CustomLink, Title } from "./styles";
 
 interface IProps {
   title: string | null;
@@ -7,9 +8,10 @@ interface IProps {
   poster: string | undefined;
   imdbID: string;
   isTrend?: boolean;
+  isFavorite?: boolean;
 }
 
-export const MovieListItem = ({ title, poster, imdbID, year, isTrend }: IProps) => {
+export const MovieListItem = ({ title, poster, imdbID, year, isTrend, isFavorite }: IProps) => {
   return (
     <Movie
       initial={{ opacity: 1 }}
@@ -17,11 +19,38 @@ export const MovieListItem = ({ title, poster, imdbID, year, isTrend }: IProps) 
       viewport={{ once: false }}
       whileHover={{ scale: 1.1, transition: { delay: 0.2 } }}
     >
+      <>
+        <MoviePoster src={poster === "N/A" ? notFoundImage : poster} />
+        {isTrend && (
+          <TrendsIcon
+            style={{
+              position: "absolute",
+              margin: "10px 5px",
+              width: "20px",
+              height: "30px",
+              padding: "3px",
+              borderRadius: "5px",
+              background: `${Color.Primary}`,
+              fill: `${Color.White}`,
+            }}
+          />
+        )}
+        {isFavorite && (
+          <FavoritesIcon
+            style={{
+              position: "absolute",
+              margin: "10px 5px",
+              width: "20px",
+              height: "30px",
+              padding: "3px",
+              borderRadius: "5px",
+              background: `${Color.Primary}`,
+              fill: `${Color.White}`,
+            }}
+          />
+        )}
+      </>
       <CustomLink to={`/movies/${imdbID}`}>
-        <>
-          <MoviePoster src={poster === "N/A" ? notFoundImage : poster} />
-          {isTrend && <MovieTrendsIcon />}
-        </>
         <Title>{title}</Title>
       </CustomLink>
       <Released>Released: {year}</Released>

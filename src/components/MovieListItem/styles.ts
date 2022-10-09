@@ -1,4 +1,3 @@
-import { TrendsIcon } from "assets";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -59,16 +58,4 @@ export const Released = styled.span`
   line-height: 24px;
   letter-spacing: 0em;
   color: ${Color.Light};
-`;
-
-export const MovieTrendsIcon = styled(TrendsIcon)`
-  position: absolute;
-  left: 10px;
-  top: 5px;
-  height: 30px;
-  width: 20px;
-  padding: 5px;
-  border-radius: 5px;
-  fill: ${Color.White};
-  background-color: ${Color.Primary};
 `;

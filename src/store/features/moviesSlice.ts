@@ -140,7 +140,6 @@ const movieSlice = createSlice({
       if (payload) {
         state.isLoading = false;
         state.isFound = false;
-        state.movies = [];
         state.error = "Error";
       }
     });
@@ -155,7 +154,7 @@ const movieSlice = createSlice({
     builder.addCase(fetchMoviesByParams.rejected, (state, { payload }) => {
       if (payload) {
         state.isLoading = false;
-        state.movies = [];
+        state.isFound = false;
         state.error = "Error";
       }
     });

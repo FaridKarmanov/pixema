@@ -14,7 +14,14 @@ export const FavoritesList = () => {
     <StyledFavoritesList>
       {favorites.map(({ year, title, poster, imdbID }: IMovie) => (
         <Container>
-          <MovieListItem key={imdbID} year={year} title={title} poster={poster} imdbID={imdbID} />
+          <MovieListItem
+            key={imdbID}
+            year={year}
+            title={title}
+            poster={poster}
+            imdbID={imdbID}
+            isFavorite={true}
+          />
           <Buttons onClick={() => dispatch(removeFromFavorites(title))}>
             <FavoritesIcon />
           </Buttons>

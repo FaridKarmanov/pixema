@@ -1,9 +1,43 @@
 import { TrendsList } from "components";
+import { useInput } from "hooks";
+import Select, { SingleValue } from "react-select";
+import { IOption } from "types";
+import { Container, selectStyles } from "./styles";
+
+const options: IOption[] = [
+  { value: "2021", label: "2021" },
+  { value: "2020", label: "2020" },
+  { value: "2019", label: "2019" },
+  { value: "2018", label: "2018" },
+  { value: "2017", label: "2017" },
+];
 
 export const TrendsPage = () => {
+  const { value, setValue } = useInput("2020");
+
+  const getValue = () => {
+    return value ? options.find((option) => option.value === value) : options[0];
+  };
+
+  const handleValue = (option: SingleValue<IOption>): void => {
+    if (option) setValue(option.value);
+  };
+
   return (
     <>
-      <TrendsList />
+      <Container>
+        <Select
+          options={options}
+          isMulti={false}
+          isSearchable={false}
+          defaultValue={options[0]}
+          styles={selectStyles}
+          value={getValue()}
+          onChange={handleValue}
+        />
+      </Container>
+
+      <TrendsList value={value} />
     </>
   );
 };

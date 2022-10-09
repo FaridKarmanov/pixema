@@ -21,8 +21,6 @@ import { Input } from "components";
 import { FilterValue, IOption } from "types";
 import { Color } from "ui";
 import { AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { ROUTE } from "routes";
 
 interface IProps {
   setIsOpen: (isOpen: boolean) => void;
@@ -37,7 +35,9 @@ const options: IOption[] = [
 
 export const SearchMenu = ({ setIsOpen, isOpen }: IProps) => {
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
+  const getValue = (value: string) => {
+    return value ? options.find((option) => option.value === value) : options[0];
+  };
 
   const {
     control,
@@ -46,7 +46,7 @@ export const SearchMenu = ({ setIsOpen, isOpen }: IProps) => {
   } = useForm<FilterValue>();
 
   const onSubmit: SubmitHandler<FilterValue> = (info) => {
-    dispatch(fetchMoviesByParams(info)).then(() => navigate(ROUTE.HOME));
+    dispatch(fetchMoviesByParams(info));
     setIsOpen(false);
   };
 
@@ -103,10 +103,9 @@ export const SearchMenu = ({ setIsOpen, isOpen }: IProps) => {
                         options={options}
                         isMulti={false}
                         isSearchable={false}
-                        defaultValue={options[0]}
                         styles={selectStyles}
-                        value={options.find((c) => c.value === value)}
-                        onChange={(val) => onChange(val?.value)}
+                        value={getValue(value)}
+                        onChange={onChange}
                       />
                     )}
                   />

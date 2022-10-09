@@ -51,6 +51,7 @@ export const SearchBar = () => {
         <SearchButton
           onClick={() => {
             setIsOpen(true);
+            navigate(ROUTE.HOME);
           }}
         >
           <SearchIcon />
