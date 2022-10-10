@@ -20,8 +20,8 @@ export const Title = styled.p`
 
 export const MoviePoster = styled.img`
   width: 100%;
-  border-radius: 10px;
   height: 357px;
+  border-radius: 10px;
 
   @media screen and (min-width: 768px) {
     height: 320px;

@@ -8,10 +8,10 @@ export const Button = styled.button<{ $isDark: Theme }>`
   border-radius: 10px;
   border: none;
   background-color: ${({ $isDark }) => ($isDark === "dark" ? Color.Primary : Color.Secondary)};
+  cursor: pointer;
   &:hover {
     background-color: ${({ $isDark }) => ($isDark === "dark" ? Color.SecondaryLight : Color.Light)};
   }
-  cursor: pointer;
 `;
 
 export const Circle = styled.div<{ $isDark: Theme }>`

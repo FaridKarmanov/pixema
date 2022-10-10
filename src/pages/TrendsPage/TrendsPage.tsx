@@ -1,8 +1,6 @@
 import { TrendsList } from "components";
 import { useInput } from "hooks";
 import Select, { SingleValue } from "react-select";
-import { useAppSelector } from "store/hooks";
-import { getTrends } from "store/selectors";
 import { IOption } from "types";
 import { Container, selectStyles } from "./styles";
 
@@ -17,7 +15,6 @@ const options: IOption[] = [
 
 export const TrendsPage = () => {
   const { value, setValue } = useInput("2022");
-  const { isLoading } = useAppSelector(getTrends);
 
   const getValue = () => {
     return value ? options.find((option) => option.value === value) : options[0];
@@ -29,24 +26,20 @@ export const TrendsPage = () => {
 
   return (
     <>
-      {isLoading ? (
-        <></>
-      ) : (
-        <>
-          <Container>
-            <Select
-              options={options}
-              isMulti={false}
-              isSearchable={false}
-              defaultValue={options[0]}
-              styles={selectStyles}
-              value={getValue()}
-              onChange={handleValue}
-            />
-          </Container>
-          <TrendsList value={value} />
-        </>
-      )}
+      <>
+        <Container>
+          <Select
+            options={options}
+            isMulti={false}
+            isSearchable={false}
+            defaultValue={options[0]}
+            styles={selectStyles}
+            value={getValue()}
+            onChange={handleValue}
+          />
+        </Container>
+        <TrendsList value={value} />
+      </>
     </>
   );
 };

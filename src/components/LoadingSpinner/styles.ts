@@ -15,8 +15,8 @@ export const Ring = styled.div`
   line-height: 150px;
   font-family: sans-serif;
   font-size: 20px;
-  color: ${Color.Primary};
   letter-spacing: 4px;
+  color: ${Color.Primary};
   text-transform: uppercase;
   text-shadow: 0 0 10px ${Color.Primary};
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);

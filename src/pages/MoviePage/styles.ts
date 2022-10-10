@@ -24,7 +24,6 @@ export const Wrapper = styled(motion.div)`
 
   @media screen and (min-width: 1440px) {
     grid-template-columns: minmax(266px, 272px) minmax(auto, 878px);
-
     padding-left: 238px;
   }
 `;

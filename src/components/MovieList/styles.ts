@@ -37,6 +37,6 @@ export const StyledMovieList = styled.ul`
 `;
 
 export const Message = styled.div`
-  color: red;
-  background: black;
+  color: ${Color.Error};
+  background: ${Color.Black};
 `;

@@ -12,7 +12,6 @@ export const Button = styled.button`
   text-align: center;
   background: ${Color.Primary};
   color: ${Color.White};
-  border: none;
   border-radius: 10px;
   cursor: pointer;
 `;
