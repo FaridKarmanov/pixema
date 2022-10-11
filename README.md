@@ -95,7 +95,7 @@ To get a local copy of the app up and running follow these simple example steps.
 
 ## Contact
 
-Egor Kirpichev - [telegram](https://t.me/frontkarmanov) - [gmail]faridkarmanov@gmail.com
+Farid Karmanov - [telegram](https://t.me/frontkarmanov) - [gmail]faridkarmanov@gmail.com
 
 Project Link: [https://github.com/FaridKarmanov/pixema](https://github.com/FaridKarmanov/pixema)
 
