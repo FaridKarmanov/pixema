@@ -108,7 +108,7 @@ Project Link: [https://github.com/FaridKarmanov/pixema](https://github.com/Farid
 [stars-shield]: https://img.shields.io/github/stars/FaridKarmanov/pixema.svg?style=for-the-badge
 [stars-url]: https://github.com/FaridKarmanov/pixema/stargazers
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/farid-karmanov-222695251/
 [typescriptlang.org]: https://img.shields.io/badge/-Typescript-blue?style=for-the-badge&logo=typescript&logoColor=white
 [typescript-url]: https://www.typescriptlang.org/
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
