@@ -35,9 +35,6 @@ const options: IOption[] = [
 
 export const SearchMenu = ({ setIsOpen, isOpen }: IProps) => {
   const dispatch = useAppDispatch();
-  const getValue = (value: string) => {
-    return value ? options.find((option) => option.value === value) : options[0];
-  };
 
   const {
     control,
@@ -97,18 +94,23 @@ export const SearchMenu = ({ setIsOpen, isOpen }: IProps) => {
                   <Title>Genre</Title>
                   <Controller
                     control={control}
-                    name="t"
-                    render={({ field: { onChange, value } }) => (
+                    name="type"
+                    rules={{
+                      required: "Genre is required",
+                    }}
+                    render={({ field: { onChange } }) => (
                       <Select
                         options={options}
                         isMulti={false}
                         isSearchable={false}
                         styles={selectStyles}
-                        value={getValue(value)}
-                        onChange={onChange}
+                        onChange={(options) => options && onChange(options.value)}
                       />
                     )}
                   />
+                  {errors.type && (
+                    <AttentionMessage>{errors.type.message?.toString()}</AttentionMessage>
+                  )}
                 </Block>
 
                 <Block>

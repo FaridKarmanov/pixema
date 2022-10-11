@@ -87,7 +87,7 @@ export interface IOption {
 }
 
 export interface FilterValue {
-  t: string;
+  type: string;
   s: string;
   y: string;
 }

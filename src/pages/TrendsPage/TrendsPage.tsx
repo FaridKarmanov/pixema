@@ -32,7 +32,6 @@ export const TrendsPage = () => {
             options={options}
             isMulti={false}
             isSearchable={false}
-            defaultValue={options[0]}
             styles={selectStyles}
             value={getValue()}
             onChange={handleValue}
