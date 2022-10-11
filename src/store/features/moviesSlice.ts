@@ -134,6 +134,7 @@ const movieSlice = createSlice({
     });
     builder.addCase(fetchSortMovies.fulfilled, (state, { payload }) => {
       state.isLoading = false;
+      state.isFound = true;
       state.movies = payload;
     });
     builder.addCase(fetchSortMovies.rejected, (state, { payload }) => {
@@ -149,6 +150,7 @@ const movieSlice = createSlice({
     });
     builder.addCase(fetchMoviesByParams.fulfilled, (state, { payload }) => {
       state.isLoading = false;
+      state.isFound = true;
       state.movies = payload;
     });
     builder.addCase(fetchMoviesByParams.rejected, (state, { payload }) => {

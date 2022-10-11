@@ -1,18 +1,11 @@
-import { useEffect } from "react";
-import { fetchMovies } from "store/features";
-import { useAppDispatch, useAppSelector } from "store/hooks/";
+import { useAppSelector } from "store/hooks/";
 import { LoadingSpinner, MovieListItem } from "components";
 import { StyledMovieList } from "./styles";
 import { getMovies } from "store/selectors";
 import { IMovie } from "types";
 
 export const MovieList = () => {
-  const dispatch = useAppDispatch();
   const { isLoading, movies } = useAppSelector(getMovies);
-
-  useEffect(() => {
-    dispatch(fetchMovies());
-  }, [dispatch]);
 
   if (isLoading) {
     return <LoadingSpinner />;

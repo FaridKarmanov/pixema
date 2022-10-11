@@ -1,5 +1,7 @@
 import { MovieList } from "components";
 import { LoadingMoreSpinner } from "components";
+import { useEffect } from "react";
+import { fetchMovies } from "store/features";
 import { fetchShowMoreMovies, updatePage } from "store/features";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import { getMovies } from "store/selectors";
@@ -8,11 +10,16 @@ import { Clue, Container, EndMessage, ShowMoreButton } from "./styles";
 export const HomePage = () => {
   const dispatch = useAppDispatch();
   const { isLoadingMore, isFound, isLoading, page } = useAppSelector(getMovies);
+  const isPage = page === 100;
+
   const handleClickMoreMovies = () => {
     dispatch(updatePage());
     dispatch(fetchShowMoreMovies(page.toString()));
   };
-  const isPage = page === 100;
+
+  useEffect(() => {
+    dispatch(fetchMovies());
+  }, [dispatch]);
 
   return (
     <>
