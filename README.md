@@ -95,17 +95,17 @@ To get a local copy of the app up and running follow these simple example steps.
 
 ## Contact
 
-Farid Karmanov - [telegram](https://t.me/frontkarmanov) - [gmail] (faridkarmanov@gmail.com)
+Farid Karmanov - [telegram](https://t.me/frontkarmanov) - faridkarmanov@gmail.com
 
 Project Link: [https://github.com/FaridKarmanov/pixema](https://github.com/FaridKarmanov/pixema)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-[contributors-shield]: https://img.shields.io/github/contributors/FaridKarmanov/FaridKarmanov/pixema.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/FaridKarmanov/pixema.svg?style=for-the-badge
 [contributors-url]: https://github.com/FaridKarmanov/pixema/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/FaridKarmanov/FaridKarmanov/pixema.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/FaridKarmanov/pixema.svg?style=for-the-badge
 [forks-url]: https://github.com/FaridKarmanov/pixema/network/members
-[stars-shield]: https://img.shields.io/github/stars/FaridKarmanov/FaridKarmanov/pixema.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/FaridKarmanov/pixema.svg?style=for-the-badge
 [stars-url]: https://github.com/FaridKarmanov/pixema/stargazers
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
