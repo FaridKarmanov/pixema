@@ -1,5 +1,5 @@
 import { TrendsList } from "components";
-import { useInput } from "hooks";
+import { useState } from "react";
 import Select, { SingleValue } from "react-select";
 import { IOption } from "types";
 import { Container, selectStyles } from "./styles";
@@ -14,7 +14,7 @@ const options: IOption[] = [
 ];
 
 export const TrendsPage = () => {
-  const { value, setValue } = useInput("2022");
+  const [value, setValue] = useState("2022");
 
   const getValue = () => {
     return value ? options.find((option) => option.value === value) : options[0];
