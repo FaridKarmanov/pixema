@@ -157,8 +157,7 @@ export const SignUp = ({ toggle }: IProps) => {
           <FormButton type="submit">Sign up</FormButton>
 
           <Clue>
-            Already have an account?
-            <FormLink to={`/${ROUTE.SIGN_IN}`}>Sign In</FormLink> or{" "}
+            Already have an account? <FormLink to={`/${ROUTE.SIGN_IN}`}>Sign In</FormLink> or{" "}
             <FormLink to={`${ROUTE.HOME}`}>Home</FormLink>
           </Clue>
 
