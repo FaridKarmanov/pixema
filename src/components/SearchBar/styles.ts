@@ -125,6 +125,7 @@ export const BurgerButton = styled.button`
   margin-bottom: 32px;
   border-radius: 10px;
   background: none;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     margin-left: 32px;
